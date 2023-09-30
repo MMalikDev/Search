@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="none" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Web search with no extra parameters" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="index.js" defer></script>
+    <title>Query</title>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <a class="skip-navigation-link" href="#content">Skip Navigation</a>
+
+      <div class="logo">
+        <a href="#">
+          <img src="./assets/logo.svg" alt="logo" />
+        </a>
+      </div>
+
+      <nav aria-label="Main">
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <img src="./assets/menu.svg" alt="menu-toggle" />
+
+          <span class="visually-hidden">menu-toggle</span>
+        </button>
+
+        <ul
+          id="primary-navigation"
+          class="primary-navigation"
+          data-state="closed"
+        >
+          <li class="nav-item">
+            <a class="nav-link" href="#content" aria-current="page"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a target="_blank" class="nav-link" href="https://www.google.com">
+              Google
+            </a>
+          </li>
+          <li class="nav-item">
+            <a target="_blank" class="nav-link" href="https://search.brave.com">
+              Brave
+            </a>
+          </li>
+          <li class="nav-item">
+            <a target="_blank" class="nav-link" href="https://duckduckgo.com">
+              DuckDuckGo
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <div class="container">
+        <!--  -->
+
+        <!-- Google -->
+        <div class="wrapper">
+          <h1>Google</h1>
+          <form
+            method="get"
+            target="_blank"
+            class="search-box"
+            action="https://google.com/search"
+          >
+            <label for="search" class="visually-hidden">
+              Lookup Query on Google
+            </label>
+            <input id="search" placeholder="Search..." name="q" />
+            <button type="submit">
+              <i class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Brave -->
+        <div class="wrapper">
+          <h1>Brave</h1>
+          <form
+            method="get"
+            target="_blank"
+            class="search-box"
+            action="https://search.brave.com/search"
+          >
+            <label for="search" class="visually-hidden">
+              Lookup Query on Brave
+            </label>
+            <input id="search" placeholder="Search..." name="q" />
+            <button type="submit">
+              <i class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- DuckDuckGo -->
+        <div class="wrapper">
+          <h1>DuckDuckGo</h1>
+          <form
+            method="get"
+            target="_blank"
+            class="search-box"
+            action="https://duckduckgo.com/"
+          >
+            <label for="search" class="visually-hidden">
+              Lookup Query on DuckDuckGo
+            </label>
+            <input id="search" placeholder="Search..." name="q" />
+            <button type="submit">
+              <i class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+
+        <!--  -->
+      </div>
+    </main>
+
+    <footer>
+      <small class="copyrights">
+        &copy; <span id="currentYear"></span>. All Rights Reserved
+      </small>
+    </footer>
+  </body>
+</html>
